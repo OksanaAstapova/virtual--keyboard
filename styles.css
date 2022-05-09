@@ -1,0 +1,145 @@
+
+.body{
+    background: palegreen;
+    background-image: url("bgr.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.screen{
+    width: 100%;
+    height: 80%;
+    background: white;
+    border-radius: 3%;
+    border: 1px solid rgb(252, 255, 254);
+    box-shadow: 5px 5px 5px gray;
+    text-decoration: none;
+}
+textarea{
+    outline:none;
+}
+
+
+
+.title{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-family: Comic Sans MS, cursive;
+    text-align: center;
+    text-shadow: #a73456 1px 0 10px;
+    user-select: none;
+
+    
+    }
+
+    .wrapper{
+        width: 80vw;
+        height: 45vh;
+        max-width: 700px;
+         display: flex;
+        flex-direction: column;
+        gap:2%;
+        margin: 0 auto;
+       
+    }
+    .description{
+        display: flex;
+        justify-content: space-around;
+        text-shadow: #ffffff 1px 0 10px;
+        user-select: none;
+
+        
+
+    }
+.keyboard {
+    position: fixed;
+    margin: auto; /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70vw;
+    max-width: 800px;
+    padding: 5px 0;
+    background: plum;
+    box-shadow: 0 0 50px rgb(0 0 0 / 50%);
+    user-select: none;
+    border-radius: 3%;
+    border: 2px solid rgb(251 255 251);
+}
+
+
+.keyboard__keys {
+    text-align: center;
+}
+
+.keyboard__key {
+    height: 45px;
+    width: 5.5%;
+    /* max-width: 90px; */
+    margin: 0.3%;
+    border-radius: 4px;
+    border: 1px solid  rgb(54, 5, 67);
+    background: rgb(172, 6, 218);
+    color: #ffffff;
+    font-size: 1.05rem;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.keyboard__key:hover{
+    border: 2px dotted #fffffd;}
+
+.keyboard__key:active {
+    background: rgba(255, 255, 255, 0.12);
+}
+.color{
+    background: rgb(54, 5, 67);
+}
+.caps_enter, .shift{
+    width: 14%;
+}
+
+.bcsp{
+    width: 17%;
+}
+.tab_del{
+    width: 8%;
+}
+.space {
+    width: 43%;
+    max-width: 500px;
+}
+
+.ctrl{
+    width:7.5%;
+}
+.specFont{
+    font-style: italic;
+    font-size: larger;
+}
+.keyboard__key--activatable::after {
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.keyboard__key--active::after {
+    background: #08ff00;
+}
+
+.keyboard__key--dark {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
