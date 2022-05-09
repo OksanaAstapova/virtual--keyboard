@@ -336,7 +336,7 @@ export default Keyboard = {
         }
     },
 
-    open(initialValue, oninput, onclose) {
+    open(initialValue, oninput) {
         this.properties.value = initialValue || "";
         this.eventHandlers.oninput = oninput;
        

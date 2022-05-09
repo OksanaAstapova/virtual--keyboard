@@ -49,7 +49,7 @@
         );
     
     
-    document.addEventListener('keyup', (e) => {
+    document.addEventListener('keyup', () => {
     document.querySelectorAll('.keyboard__key').forEach(key => {
         key.classList.remove('keyboard__key--dark')
     
