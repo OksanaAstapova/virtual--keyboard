@@ -72,6 +72,7 @@ export default Keyboard = {
  
     _createKeys() {
         const textarea = document.querySelector('.use-keyboard-input');
+        const width = window.innerWidth;
 
         const fragment = document.createDocumentFragment();
         const keys_push  = [
@@ -93,8 +94,9 @@ export default Keyboard = {
 
             switch (key) {
                 case "backspace":
+
                     keyElement.classList.add("bcsp", "color", "specFont");
-                    keyElement.innerHTML = "backspace";
+
 
                     keyElement.addEventListener("click", () => {
                         document.querySelector('.use-keyboard-input').focus();
@@ -102,6 +104,10 @@ export default Keyboard = {
                         this.properties.value = this.properties.value.substring(0, this.properties.value.length - 1);
                         this._triggerEvent("oninput");
                     });
+
+                    if(width > 600){
+                    keyElement.innerHTML = "backspace";}
+                    else keyElement.innerHTML = "◄";
 
                     break;
 
@@ -133,8 +139,7 @@ export default Keyboard = {
                     break;
 
                 case "caps":
-                    keyElement.classList.add("caps", "caps_enter", "keyboard__key--activatable", "color",  "specFont");
-                    keyElement.innerHTML = "caps";
+                    keyElement.classList.add("caps", "caps_enter", "keyboard__key--activatable", "color",  "specFont", "caps");
 
                     keyElement.addEventListener("click", () => {
                         textarea.focus();
@@ -142,6 +147,12 @@ export default Keyboard = {
                         this._toggleCapsLock();
                         keyElement.classList.toggle("keyboard__key--active", this.properties.capsLock);
                     });
+
+                    if(width > 600){
+                        keyElement.innerHTML = "caps";}
+                        else keyElement.innerHTML = "⇪";
+        
+                    break;
 
                     break;
 
@@ -198,13 +209,16 @@ export default Keyboard = {
 
                  case "win":
                     keyElement.classList.add("color", "specFont");
-                    keyElement.innerHTML = "win";
                     
                     keyElement.addEventListener("click", () => {
                         textarea.focus();
                         this.properties.value += "";
                         this._triggerEvent("oninput");
                     });
+
+                    if(width > 600){
+                        keyElement.innerHTML = "win";}
+                        else keyElement.innerHTML = "&#9829";
         
                     break;
 
