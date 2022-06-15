@@ -142,4 +142,61 @@ textarea{
     background: rgba(255, 255, 255, 0.12);
 }
 
+@media (max-width: 999.9px){
+
+    .title{
+        margin-top: 10vh;
+    }
+ 
+    .keyboard{
+
+        width: 80vw;
+        max-width: unset;
+    }
+
+    .keyboard__key{
+        height: 40px;
+    }
+
+
+}
+
+@media (max-width: 699.9px){
+ 
+    .keyboard{
+
+        width: 90vw;
+    }
+
+    .keyboard__key{
+        height: 35x;
+    }
+
+
+}
+
+@media (max-width: 499.9px){
+ 
+    .keyboard{
+
+        width: 100vw;
+    }
+
+    .keyboard__key{
+        height: 30px;
+        font-size: 1em;
+    }
+
+    .specFont{
+
+        font-size: 0.8em;
+    }
+
+    .caps{
+        font-style: normal;
+        padding-right: 15px;
+    }
+
+
+}
 
